@@ -609,12 +609,21 @@ button {
     }
 
     .stack-container {
-        /* margin-right: 200px; */
+        margin-right: 200px;
         margin-left: 100px;
     }
 
+    .stacks img {
+        width: 150px;
+    }
+
+
     .project-container {
         display: block;
+    }
+
+    .p-cards img {
+        /* width: 100rem; */
     }
 
     .p-cards:nth-child(odd) {
@@ -624,6 +633,7 @@ button {
     .p-cards:nth-child(even) {
         margin-left: 4rem;
     }
+
 
 
     /* .p-cards img {
