@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./Photos/fevicon.png" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <title>Hardik Saggar</title>
+  </head>
+
+  <body>
+    <header id="home" class="hero">
+      <nav class="nav-bar">
+        <a href="#home">
+          <img
+            id="logo"
+            class="logo"
+            src="./Photos/logo.png"
+            alt="logo"
+            href="#Home"
+          />
+        </a>
+
+        <ul class="menu">
+          <li class="nav-item active">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tech-stack" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </div>
+
+        <!-- <i class="fa-solid fa-bars">
+          <ul class="bar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tech-stack">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </i> -->
+      </nav>
+      <div class="banner">
+        <span class="intro" data-aos="fade-down">
+          <h1 style="color: rgb(113, 113, 255)">
+            Hi There, <br />I'm
+            <span class="name">Hardik Saggar</span>
+          </h1>
+          <h2>
+            I'm into
+            <span style="color: rgb(113, 117, 245)" class="auto-type"></span>
+          </h2>
+          <button class="btn btn-1" onclick="window.location.href= '#about';">
+            About Me
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="icons-container">
+            <ul class="social-links">
+              <li>
+                <a href="https://www.linkedin.com/in/hardik-saggar-624068248/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-square-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-google-plus"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/19888663/hardik" target="_blank">
+                  <i class="fa-brands fa-stack-overflow"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </span>
+        <div class="banner-image" data-aos="fade-right">
+          <div class="card-container">
+            <div class="card">
+              <!-- <br /> -->
+              <!-- <img src="./Photos/banner-logo.png" alt="" /> -->
+              <!-- <i class="fa-solid fa-user fa-2xl"></i> -->
+              <i class="fa-solid fa-ghost"></i>
+
+              <div class="layers">
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section about-me hidden">
+        <h1 class="section-heading mbb75px">
+          <span> <i class="fa-solid fa-user"></i></span>
+          <span>ABOUT <span class="heading-color">ME</span></span>
+        </h1>
+        <div class="about-container">
+          <div data-aos="slide-right" class="about-img">
+            <img src="./Photos/about-me.jpg" alt="" />
+          </div>
+          <div data-aos="slide-up" class="para">
+            <h2>Front-End Developer</h2>
+            <p data-aos="slide-up">
+              Aspiring Full-Stack Web development. Currently working on Front
+              End Web Development with ReactJS and UI&UX. Future Learnings -
+              Learning/practicing Nodejs, Figma, MongoDB, Express.
+            </p>
+            <button class="btn-cv" type="submit">Download CV</button>
+          </div>
+        </div>
+      </section>
+      <section id="tech-stack" class="section hidden">
+        <h1 class="section-heading mbb75px">
+          <span> <i class="fa-solid fa-layer-group"></i></span>
+          <span>SKILLS <span class="heading-color">STACK</span></span>
+        </h1>
+        <div class="stack-container">
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack1.jpg" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack2.png" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack3.png" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack10.png" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack4.png" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack5.png" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack6.jpg" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack7.png" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack8.jpg" alt="" />
+          </div>
+          <div class="stacks" data-aos="fade-down">
+            <img src="./Photos/stack9.png" alt="" />
+          </div>
+          <!-- <div class="stacks" data-aos="flip-up"></div> -->
+        </div>
+      </section>
+      <!-- <section id="education" class="section hidden">
+        <h1 class="section-heading mbb75px">
+          <span> <i class="fa-solid fa-book-bookmark"></i></i></span>
+          <span>MY <span class="heading-color">EDUCATION</span></span>
+        </h1>
+      </section> -->
+      <section id="projects" class="section hidden">
+        <h1 class="section-heading mbb75px">
+          <span><i class="fa-solid fa-laptop-code"></i></span>
+          <span>PROJECTS <span class="heading-color">MADE</span></span>
+        </h1>
+        <div class="project-container">
+          <div class="p-cards" data-aos="flip-down">
+            <div class="p-img">
+              <!-- <a href="http://arcovation.rf.gd/" target="_blank"> -->
+                <img src="./Photos/pr1.png" alt="" />
+              </a>
+            </div>
+            <div class="p-info">
+              <h1>Architect's Website</h1>
+              <button class="info-btn">
+                <a href="http://arcovation.rf.gd/" target="_blank"> Visit</a>
+              </button>
+            </div>
+          </div>
+          <div class="p-cards" data-aos="flip-down">
+            <div class="p-img">
+              
+                <img src="./Photos/pr2.png" alt="" />
+              </a>
+            </div>
+            <div class="p-info">
+              <h1>Pig Game</h1>
+              <button class="info-btn">
+                <a href="http://piggame.infinityfreeapp.com/" target="_blank"> Visit</a>
+              </button>
+            </div>
+          </div>
+          <div class="p-cards" data-aos="flip-up">
+            <div class="p-img">
+              <a
+                href="http://guessmynumber.infinityfreeapp.com/"
+                target="_blank"
+                ><img src="./Photos/pr3.png" alt="" />
+              </a>
+            </div>
+            <div class="p-info">
+              <h1>Guess my Number Game</h1>
+              <button class="info-btn">
+                <a href="http://guessmynumber.infinityfreeapp.com/"  target="_blank"> Visit</a>
+              </button>
+            </div>
+          </div>
+          <!-- <div class="p-cards" data-aos="flip-up">
+            <div class="p-img">
+              <a href="" target="_blank">
+                <img src="./Photos/pr4.png" alt="" />
+              </a>
+            </div>
+            <div class="p-info">
+              <h1>Bank Website</h1>
+              <button class="info-btn">
+                <a href="http://piggame.infinityfreeapp.com/" target="_blank"> Visit</a>
+              </button>
+            </div>
+          </div> -->
+          <!-- </div>
+          <div class="p-cards" data-aos="flip-up">
+            <a href="http://piggame.infinityfreeapp.com/" target="_blank"></a>
+          </div>
+          <div class="p-cards" data-aos="flip-up">
+            <a href=""><img src="./Photos/pr3.png" alt="" /></a>
+          </div>
+          <div class="p-cards" data-aos="flip-up">
+            <a href="http://guessmynumber.infinityfreeapp.com/" target="_blank"
+              ><img src="./Photos/pr4.png" alt=""
+            /></a>
+          </div> -->
+          <!-- <div class="p-cards" data-aos="flip-up"></div> -->
+          <!-- <div class="p-cards" data-aos="flip-up"></div> -->
+        </div>
+      </section>
+
+      <section id="contact" class="section hidden" data-aos="fade-down">
+        <div class="contact">
+          <div class="contact-details">
+            <h1>Contact</h1>
+            <div class="detail" data-aos="fade-down">
+              <h3>
+                <i
+                  class="fa-solid fa-envelope"
+                  style="color: rgb(255, 212, 56)"
+                ></i>
+                Email
+              </h3>
+              <p>hardiksaggar99@gmail.com</p>
+            </div>
+            <div class="detail" data-aos="fade-down">
+              <h3>
+                <i class="fa-solid fa-phone" style="color: #ffd438"></i> M.
+                Number
+              </h3>
+              <p>+91 8437692801</p>
+              <div class="icons-container">
+                <ul class="social-links">
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-stack-overflow"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="form">
+            <h1>Hey! Contact me <br />here.</h1>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <h3>All rights 	&copy; reserved to <span>Hardik Saggar<span>😎</h3>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 800,
+        once: false,
+      });
+    </script>
+
+    <script>
+      let typed = new Typed(".auto-type", {
+        strings: ["Coding", "Web Development", "Designing"],
+        typeSpeed: 80,
+        backSpeed: 20,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
