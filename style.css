@@ -1,3 +1,5 @@
+/* This is a portfolio website  */
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Ubuntu:wght@500&display=swap');
 
@@ -24,8 +26,6 @@ body {
 
 /* navbar */
 
-/* .hero{} */
-
 .nav-bar {
     display: flex;
     position: fixed;
@@ -48,7 +48,7 @@ body {
 .nav-bar img:hover {
     /* color: aliceblue; */
     filter: hue-rotate(164deg) saturate(200%) brightness(140%) contrast(120%);
-    /* filter: saturate(150%); */
+    /* filter: saturate(150%); */ 
 
 }
 
@@ -72,6 +72,7 @@ body {
     transition: all ease-in .3s;
 }
 
+/* For mobile users */
 .hamburger {
     margin: 10px;
     display: none;
@@ -113,9 +114,6 @@ body {
     width: 100%;
 }
 
-
-
-/*  */
 .banner {
     display: flex;
     height: 100vh;
@@ -267,8 +265,6 @@ section {
 section h1 {
     display: flex;
     justify-content: center;
-
-
 }
 
 .section-heading {
@@ -294,6 +290,7 @@ section h1 {
     margin-bottom: 75px;
 }
 
+    /* About me section*/
 .about-container {
     margin: 1rem;
     display: flex;
@@ -305,9 +302,7 @@ section h1 {
     height: auto;
     width: auto;
 }
-
-
-
+ /* My information */   
 .para {
     /* margin: 100px auto; */
     padding: 2rem;
@@ -343,6 +338,11 @@ section h1 {
 
 .para button[type=submit]:hover {
     box-shadow: -1px 0px 9px -2px var(--yellow);
+}
+
+.btn-cv a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Skills */
