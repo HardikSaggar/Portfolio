@@ -23,6 +23,9 @@ body {
     background-color: var(--darkBlue);
     color: white;
 }
+main {
+    background: linear-gradient(90deg, rgb(14 4 17) 0%, rgb(0 0 0) 49%, rgb(0 5 36) 100%);
+}
 
 /* navbar */
 
