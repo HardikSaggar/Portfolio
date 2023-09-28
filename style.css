@@ -1,5 +1,3 @@
-/* This is a portfolio website  */
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Ubuntu:wght@500&display=swap');
 
@@ -10,6 +8,19 @@
     --yellow: rgb(255, 211, 54);
 }
 
+@keyframes back {
+    from {
+
+        transform: translateY(-20px);
+    }
+
+    to {
+
+        transform: translateY(0px);
+    }
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,17 +28,25 @@
     scroll-behavior: smooth;
 }
 
+html {
+    /* background-color: rgb(1, 0, 1); */
+    /* background-color: linear-gradient(90deg, rgba(1, 0, 1, 1) 0%, rgba(39, 55, 73, 1) 49%, rgba(0, 0, 0, 1) 100%); */
+}
+
 body {
     position: absolute;
     font-family: 'Ubuntu', sans-serif;
-    background-color: var(--darkBlue);
+    background: var(--darkBlue);
     color: white;
 }
+
 main {
     background: linear-gradient(90deg, rgb(14 4 17) 0%, rgb(0 0 0) 49%, rgb(0 5 36) 100%);
 }
 
 /* navbar */
+
+/* .hero{} */
 
 .nav-bar {
     display: flex;
@@ -51,7 +70,7 @@ main {
 .nav-bar img:hover {
     /* color: aliceblue; */
     filter: hue-rotate(164deg) saturate(200%) brightness(140%) contrast(120%);
-    /* filter: saturate(150%); */ 
+    /* filter: saturate(150%); */
 
 }
 
@@ -75,7 +94,6 @@ main {
     transition: all ease-in .3s;
 }
 
-/* For mobile users */
 .hamburger {
     margin: 10px;
     display: none;
@@ -117,6 +135,9 @@ main {
     width: 100%;
 }
 
+
+
+/*  */
 .banner {
     display: flex;
     height: 100vh;
@@ -268,6 +289,8 @@ section {
 section h1 {
     display: flex;
     justify-content: center;
+
+
 }
 
 .section-heading {
@@ -293,7 +316,28 @@ section h1 {
     margin-bottom: 75px;
 }
 
-    /* About me section*/
+/* About Section */
+.top-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 3px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.top-btn.active {
+    animation: back 0.4s ease-out 1;
+
+    display: block;
+}
+
 .about-container {
     margin: 1rem;
     display: flex;
@@ -305,7 +349,9 @@ section h1 {
     height: auto;
     width: auto;
 }
- /* My information */   
+
+
+
 .para {
     /* margin: 100px auto; */
     padding: 2rem;
@@ -572,84 +618,18 @@ button {
 }
 
 /* MEDIA QUERIES */
-/* Mobiles */
-@media screen and (max-width:530px) {
+/* Laptops */
+@media screen and (max-width:900px) {
 
-    .banner {
-        height: 200vh;
+
+    .form i {
+        margin: 10px;
+        font-size: 30px;
     }
 
-    .intro>* {
-        margin: 30px;
-    }
-
-    .banner .intro h1 {
-        font-size: 80px;
-    }
-
-
-    .banner .btn-1 {
-        /* margin: 30px; */
-        font-size: x-large;
-    }
-
-    .banner .nav-item {
-        margin: 76px 0;
-    }
-
-    .para h2 {
+    .form h1 {
         font-size: 50px;
     }
-
-    .layers {
-        margin-left: -58px;
-        width: 150%;
-        height: 100%;
-    }
-
-    .card-container i {
-        font-size: 20rem;
-    }
-
-    .stack-container {
-        margin-right: 200px;
-        margin-left: 100px;
-    }
-
-    .stacks img {
-        width: 150px;
-    }
-
-
-    .project-container {
-        display: block;
-    }
-
-    .p-cards img {
-        /* width: 100rem; */
-    }
-
-    .p-cards:nth-child(odd) {
-        margin-left: 26rem;
-    }
-
-    .p-cards:nth-child(even) {
-        margin-left: 4rem;
-    }
-
-
-
-    /* .p-cards img {
-        margin-left: 1rem;
-    }
-
-    .para p {
-        text-align: end;
-        margin-top: 9px;
-    }*/
-
-
-
 }
 
 /* Tablets */
@@ -701,6 +681,10 @@ button {
         margin: 20px 0;
     }
 
+    .top-btn {
+        font-size: 4rem
+    }
+
 
     .menu.active {
         left: 0;
@@ -734,16 +718,88 @@ button {
     }
 }
 
-/* Laptops */
-@media screen and (max-width:900px) {
 
 
-    .form i {
-        margin: 10px;
-        font-size: 30px;
+/* Mobiles */
+@media screen and (max-width:530px) {
+
+    .banner {
+        height: 200vh;
     }
 
-    .form h1 {
+    .intro>* {
+        margin: 30px;
+    }
+
+    .banner .intro h1 {
+        font-size: 80px;
+    }
+
+
+    .banner .btn-1 {
+        /* margin: 30px; */
+        font-size: x-large;
+    }
+
+    .banner .nav-item {
+        margin: 76px 0;
+    }
+
+    .para h2 {
         font-size: 50px;
     }
+
+    .layers {
+        margin-left: -58px;
+        width: 150%;
+        height: 100%;
+    }
+
+    .top-btn {
+        font-size: 7rem
+    }
+
+    .card-container i {
+        font-size: 20rem;
+    }
+
+    .stack-container {
+        margin-right: 200px;
+        margin-left: 100px;
+    }
+
+    .stacks img {
+        width: 150px;
+    }
+
+
+    .project-container {
+        display: block;
+    }
+
+    .p-cards img {
+        /* width: 100rem; */
+    }
+
+    .p-cards:nth-child(odd) {
+        margin-left: 26rem;
+    }
+
+    .p-cards:nth-child(even) {
+        margin-left: 4rem;
+    }
+
+
+
+    /* .p-cards img {
+        margin-left: 1rem;
+    }
+
+    .para p {
+        text-align: end;
+        margin-top: 9px;
+    }*/
+
+
+
 }
