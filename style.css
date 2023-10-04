@@ -275,7 +275,7 @@ section h1 {
 }
 
 .section-heading span {
-    font-size: 30px;
+    font-size: 1.1em;
     padding-top: 10px;
     margin-right: 0.5rem;
 }
@@ -296,6 +296,8 @@ section h1 {
 .top-btn {
     display: none;
     background-color: transparent;
+    text-shadow: 0px -1.5px #fffdfd5b;
+    color: var(--yellow);
     border: none;
     font-size: 3em;
     position: fixed;
@@ -310,24 +312,28 @@ section h1 {
 @keyframes back {
     0% {
         transform: translateY(-20px);
+        color: var(--darkBlue);
+
     }
 
     25% {
         transform: translateY(-10px);
+        color: var(--navyBlue);
     }
 
     50% {
         transform: translateY(10px);
+        color: var(--yellow);
     }
 
     100% {
         transform: translateY(0px);
+        color: var(--yellow);
     }
 }
 
 .top-btn.active {
     animation: back 0.4s ease-out 1;
-
     display: block;
 }
 
@@ -338,7 +344,7 @@ section h1 {
 }
 
 .about-img {
-    margin: 30px;
+    margin: auto;
     height: auto;
     width: auto;
 }
@@ -423,10 +429,10 @@ section h1 {
 }
 
 .tab-container {
-    margin: 5em;
+    margin: 4em;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .tab__operation-btn {
@@ -434,7 +440,7 @@ section h1 {
     background-color: transparent;
     padding: 20px;
     color: grey;
-    box-shadow: 0 0 100px -23.9px white;
+    box-shadow: 0 0 100px -23.9px var(--yellow);
     transition: all linear 0.2s;
 }
 
@@ -468,6 +474,7 @@ section h1 {
 
 .tab__operation-btn.btn-active {
     color: var(--navyBlue);
+    border: 1.5px solid grey;
 }
 
 .card__content {
@@ -483,6 +490,7 @@ section h1 {
     height: 25rem;
     overflow: hidden;
     transition: 0.5s;
+    margin-bottom: 22rem;
 }
 
 .card__content.card__content--activate {
@@ -550,6 +558,7 @@ section h1 {
 .info-btn {
     background-color: transparent;
     border: 0;
+    text-shadow: 1px 2px black;
     /* opacity: 0; */
 }
 
@@ -673,8 +682,9 @@ button {
     }
 }
 
+
 /* Tablets */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
 
     /* .p-cards {
         margin-left: 7rem;
@@ -719,7 +729,7 @@ button {
     }
 
     .nav-item {
-        margin: 20px 0;
+        margin: 35px 0;
     }
 
     .top-btn {
@@ -734,22 +744,18 @@ button {
         display: block;
     }
 
-    .hamburger .bar {
-        font-size: 80px;
-    }
-
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
     .hamburger.active .bar:nth-child(1) {
         background-color: var(--yellow);
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(15px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
         background-color: var(--yellow);
-        transform: translateY(-16px) rotate(-45deg);
+        transform: translateY(-19px) rotate(-45deg);
     }
 
     .icons-container ul li {
@@ -757,31 +763,62 @@ button {
     }
 }
 
+
 /* Mobiles */
 @media screen and (max-width: 530px) {
+
+    /* Navigation bar */
+    .nav-bar {
+        height: 6em;
+    }
+
+    .nav-bar .logo {
+        width: 15em;
+        height: 5em;
+    }
+
+    .nav-item .nav-link {
+        font-size: 3.5rem;
+    }
+
+    .hamburger {
+        margin: 40px;
+    }
+
+    .hamburger .bar {
+        height: 12px;
+        width: 55px;
+    }
+
+
+    /* Banner */
     .banner {
-        height: 200vh;
+        height: 260vh;
     }
 
     .intro>* {
-        margin: 30px;
+        margin: 35px;
     }
 
     .banner .intro h1 {
-        font-size: 80px;
+        font-size: 6em;
+    }
+
+    .banner .intro h2 {
+        font-size: 2.9em;
     }
 
     .banner .btn-1 {
-        /* margin: 30px; */
-        font-size: x-large;
+        margin: 1em;
+        font-size: 1.9em;
     }
 
-    .banner .nav-item {
-        margin: 76px 0;
+    .social-links li {
+        font-size: 2.3em;
     }
 
-    .para h2 {
-        font-size: 50px;
+    .banner-image {
+        margin-top: -30em;
     }
 
     .layers {
@@ -790,25 +827,96 @@ button {
         height: 100%;
     }
 
-    .top-btn {
-        font-size: 7rem;
+    /* Sections */
+    .section-heading {
+        font-size: 2.3rem;
     }
+
+    /* About section */
+
+    .about-img img {
+        width: 30rem;
+    }
+
+    .para h2 {
+        font-size: 4em;
+    }
+
+    .para p {
+        font-size: 1.9rem;
+        line-height: 1.6em;
+    }
+
+    /* Skills section */
 
     .card-container i {
         font-size: 20rem;
     }
 
-    .stack-container {
-        margin-right: 200px;
-        margin-left: 100px;
+    .stacks img {
+        width: 9em;
     }
 
-    .stacks img {
-        width: 150px;
+    /* Projects section */
+    .tab-container {
+        margin: 3em 3em 8em 3em;
     }
 
     .tab__operation-btn {
-        font-size: 1.2rem;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        box-shadow: 0 0 33px -24px white;
+    }
+
+    .p-info h1 {
+        font-size: 2.5em;
+    }
+
+    .info-btn {
+        font-size: 1.8em;
+
+    }
+
+    /* Back to top btn */
+    .top-btn {
+        font-size: 7rem;
+    }
+
+    /* Contact us section */
+    .contact {
+        height: 50rem;
+    }
+
+    .contact-details {
+        height: 40rem;
+        width: 35rem;
+
+    }
+
+    .contact-details .detail {
+        margin-top: 75px;
+
+    }
+
+    .contact-details .detail h3 {
+        font-size: 2em;
+    }
+
+    .contact-details .detail p {
+        font-size: 2.2rem;
+    }
+
+
+    /* Foot */
+
+    .foot {
+        height: 7vh;
+
+    }
+
+    .foot h3 {
+        font-size: 1.5rem;
     }
 
     /* .project-container {
