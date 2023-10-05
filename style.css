@@ -15,11 +15,6 @@
     scroll-behavior: smooth;
 }
 
-html {
-    /* background-color: rgb(1, 0, 1); */
-    /* background-color: linear-gradient(90deg, rgba(1, 0, 1, 1) 0%, rgba(39, 55, 73, 1) 49%, rgba(0, 0, 0, 1) 100%); */
-}
-
 body {
     position: absolute;
     font-family: "Ubuntu", sans-serif;
@@ -238,17 +233,14 @@ main {
 
 .social-links li {
     display: inline-block;
-    margin-inline-end: 28px;
-    /* margin: be */
     text-align: center;
     position: relative;
-    font-size: 35px;
 }
 
 .social-links li a {
     color: white;
-    border-radius: 50%;
     transition: all ease-in 0.3s;
+    font-size: 3.1rem;
 }
 
 .social-links li a:hover {
@@ -257,12 +249,6 @@ main {
 }
 
 /* sections */
-
-section {
-    /* height: 150vh; */
-    /* width: 100%; */
-    /* margin-bottom: 100px; */
-}
 
 section h1 {
     display: flex;
@@ -296,7 +282,7 @@ section h1 {
 .top-btn {
     display: none;
     background-color: transparent;
-    text-shadow: 0px -1.5px #fffdfd5b;
+    text-shadow: 0px -1.5px #0f0f0fa5;
     color: var(--yellow);
     border: none;
     font-size: 3em;
@@ -631,6 +617,7 @@ button {
             #462523 100%);
     color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .detail {
@@ -834,6 +821,13 @@ button {
 
     /* About section */
 
+        .about-me {
+            height: 250vh;
+        }
+    
+        .about-container {
+            margin: 20rem 0;
+        }
     .about-img img {
         width: 30rem;
     }
@@ -845,6 +839,15 @@ button {
     .para p {
         font-size: 1.9rem;
         line-height: 1.6em;
+        padding: 10px;
+        }
+        
+        .btn-cv {
+            margin-left: -4rem;
+        }
+        
+        .btn-cv a {
+            font-size: 2rem;
     }
 
     /* Skills section */
@@ -881,6 +884,7 @@ button {
     /* Back to top btn */
     .top-btn {
         font-size: 7rem;
+        padding: 10px;
     }
 
     /* Contact us section */
@@ -911,12 +915,12 @@ button {
     /* Foot */
 
     .foot {
-        height: 7vh;
+        height: 8vh;
 
     }
 
     .foot h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     /* .project-container {
