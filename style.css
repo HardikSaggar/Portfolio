@@ -240,7 +240,8 @@ main {
 .social-links li a {
     color: white;
     transition: all ease-in 0.3s;
-    font-size: 3.1rem;
+    font-size: 2.5em;
+    margin: 0 10px;
 }
 
 .social-links li a:hover {
@@ -800,8 +801,8 @@ button {
         font-size: 1.9em;
     }
 
-    .social-links li {
-        font-size: 2.3em;
+    .social-links li a {
+        font-size: 3.8em;
     }
 
     .banner-image {
@@ -821,13 +822,14 @@ button {
 
     /* About section */
 
-        .about-me {
-            height: 250vh;
-        }
-    
-        .about-container {
-            margin: 20rem 0;
-        }
+    .about-me {
+        height: 255vh;
+    }
+
+    .about-container {
+        margin: 30rem 0;
+    }
+
     .about-img img {
         width: 30rem;
     }
@@ -840,14 +842,14 @@ button {
         font-size: 1.9rem;
         line-height: 1.6em;
         padding: 10px;
-        }
-        
-        .btn-cv {
-            margin-left: -4rem;
-        }
-        
-        .btn-cv a {
-            font-size: 2rem;
+    }
+
+    .btn-cv {
+        margin-left: -4rem;
+    }
+
+    .btn-cv a {
+        font-size: 2rem;
     }
 
     /* Skills section */
