@@ -121,7 +121,7 @@ main {
 .banner {
     display: flex;
     height: 100vh;
-    background: url(/Photos/wp7139290.jpg);
+    background: url(Photos/wp7139290.jpg);
     background-size: cover;
     flex-wrap: wrap;
     justify-content: space-around;
