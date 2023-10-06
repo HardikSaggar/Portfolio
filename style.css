@@ -334,7 +334,33 @@ section h1 {
     margin: auto;
     height: auto;
     width: auto;
+    /* filter: saturate(50%); */
+    filter: hue-rotate(181deg) grayscale(65%) brightness(1.5) contrast(.9);
+    opacity: 0.6;
 }
+
+.about-img:hover {
+    filter: brightness(120%) saturate(100%);
+    opacity: 1;
+}
+
+.shine img {
+    -webkit-mask-image: linear-gradient(45deg, #ffffff 25%, rgba(255, 255, 255, 0.2) 50%, #ffffff 75%);
+    /* mask-image: linear-gradient(45deg, #ffffff 25%, rgba(255, 255, 255, 0.2) 50%, #ffffff 75%); */
+    -webkit-mask-size: 800%;
+    /* mask-size: 800%; */
+    -webkit-mask-position: 0;
+    /* mask-position: 0; */
+    /* opacity: ; */
+}
+
+.shine img:hover {
+    transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+    -webkit-mask-position: 120%;
+    /* mask-position: 120%; */
+    opacity: 1;
+}
+
 
 .para {
     /* margin: 100px auto; */
@@ -342,7 +368,10 @@ section h1 {
     display: inline-grid;
     align-items: center;
     justify-items: center;
+    max-width: 40rem;
 }
+
+
 
 .para h2 {
     color: var(--yellow);
@@ -678,7 +707,7 @@ button {
         margin-left: 7rem;
     } */
     .banner {
-        height: 15 0vh;
+        height: 125vh;
     }
 
     .form {
@@ -809,6 +838,12 @@ button {
         margin-top: -30em;
     }
 
+    /* Ghost */
+
+    .card-container i {
+        font-size: 20rem;
+    }
+
     .layers {
         margin-left: -58px;
         width: 150%;
@@ -823,15 +858,21 @@ button {
     /* About section */
 
     .about-me {
-        height: 255vh;
+        height: 275vh;
     }
 
     .about-container {
-        margin: 30rem 0;
+        margin: 10rem 0 0 0;
+        flex-direction: column;
     }
 
     .about-img img {
-        width: 30rem;
+        width: 40rem;
+    }
+
+    .para {
+        margin-top: 5rem;
+        max-width: max-content;
     }
 
     .para h2 {
@@ -840,8 +881,8 @@ button {
 
     .para p {
         font-size: 1.9rem;
-        line-height: 1.6em;
-        padding: 10px;
+        line-height: 1.9em;
+        padding: 2rem 6rem;
     }
 
     .btn-cv {
@@ -854,8 +895,8 @@ button {
 
     /* Skills section */
 
-    .card-container i {
-        font-size: 20rem;
+    .stack-container {
+        margin: 10rem;
     }
 
     .stacks img {
