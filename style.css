@@ -31,8 +31,6 @@ main {
 
 /* navbar */
 
-/* .hero{} */
-
 .nav-bar {
     display: flex;
     position: fixed;
@@ -117,7 +115,17 @@ main {
     width: 100%;
 }
 
-/*  */
+#progress-bar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 8px;
+    background: linear-gradient(to right, var(--anotherBlue),var(--yellow));
+    width: 10%;
+    z-index: 10;
+}
+
+/* hero */
 .banner {
     display: flex;
     height: 100vh;
@@ -170,10 +178,7 @@ main {
 }
 
 .card i {
-    /* border: 2px solid red; */
     font-size: 10rem;
-    /* width: 10rem; */
-    /* height: 10rem; */
     color: var(--navyBlue);
     margin: 10px 15px;
 }
@@ -245,7 +250,7 @@ main {
 }
 
 .social-links li a:hover {
-    margin: 1px;
+    margin: .2em;
     color: var(--navyBlue);
 }
 
@@ -267,16 +272,12 @@ section h1 {
     margin-right: 0.5rem;
 }
 
+.section-heading span i {
+    margin-top: .1em;
+}
+
 .section-heading .heading-color {
     color: var(--navyBlue);
-}
-
-.section-heading span {
-    color: white;
-}
-
-.mb75px {
-    margin-bottom: 75px;
 }
 
 /* About Section */
@@ -404,6 +405,7 @@ section h1 {
 .btn-cv a {
     text-decoration: none;
     color: white;
+    padding: .2em;
 }
 
 /* Skills */
@@ -462,35 +464,12 @@ section h1 {
 
 .tab__operation-btn:hover {
     color: var(--navyBlue);
-    animation: projectBTN .6s ease-in .2s 1 forwards;
 }
 
-@keyframes projectBTN {
-    0% {
-        border: 1px solid rgba(58, 58, 58, 0.935)
-    }
 
-    25% {
-        border-top: 1.5px solid rgba(177, 177, 177, 0.927);
-    }
-
-    50% {
-        border-right: 1.5px solid grey;
-    }
-
-    75% {
-
-        border-bottom: 1.5px solid grey;
-    }
-
-    100% {
-        border: 1.5px solid grey;
-    }
-}
 
 .tab__operation-btn.btn-active {
     color: var(--navyBlue);
-    border: 1.5px solid grey;
 }
 
 .card__content {
@@ -673,7 +652,7 @@ button {
 }
 
 .foot {
-    height: 5vh;
+    height: 2.5em;
     background-color: rgb(72, 72, 72);
 }
 
@@ -826,12 +805,16 @@ button {
     }
 
     .banner .btn-1 {
-        margin: 1em;
-        font-size: 1.9em;
+        margin: 1.5em .5em;
+        font-size: 2.4em;
     }
 
     .social-links li a {
-        font-size: 3.8em;
+        margin-left: -2px;
+    }
+
+    .social-links li a {
+        font-size: 3.9em;
     }
 
     .banner-image {
@@ -841,7 +824,7 @@ button {
     /* Ghost */
 
     .card-container i {
-        font-size: 20rem;
+        font-size: 22rem;
     }
 
     .layers {
@@ -852,13 +835,13 @@ button {
 
     /* Sections */
     .section-heading {
-        font-size: 2.3rem;
+        font-size: 2.9rem;
     }
 
     /* About section */
 
     .about-me {
-        height: 275vh;
+        height: 130.5em;
     }
 
     .about-container {
@@ -867,7 +850,7 @@ button {
     }
 
     .about-img img {
-        width: 40rem;
+        width: 47rem;
     }
 
     .para {
@@ -876,21 +859,19 @@ button {
     }
 
     .para h2 {
-        font-size: 4em;
+        font-size: 4.5em;
     }
 
     .para p {
-        font-size: 1.9rem;
-        line-height: 1.9em;
-        padding: 2rem 6rem;
+        font-size: 2.4rem;
+        line-height: 1.8em;
+        padding: 2.5rem 3rem;
     }
 
-    .btn-cv {
-        margin-left: -4rem;
-    }
+
 
     .btn-cv a {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     /* Skills section */
@@ -909,9 +890,9 @@ button {
     }
 
     .tab__operation-btn {
-        padding: 20px;
-        font-weight: bold;
-        font-size: 1.5rem;
+        padding: 18px;
+        font-weight: 700;
+        font-size: 1.6rem;
         box-shadow: 0 0 33px -24px white;
     }
 
@@ -954,27 +935,13 @@ button {
         font-size: 2.2rem;
     }
 
-    /* .project-container {
-        display: block;
+    /* Foot */
+    .foot {
+        height: 3em;
     }
 
-    .p-cards img {
+    .foot h3 {
+        font-size: 1.6em;
     }
 
-    .p-cards:nth-child(odd) {
-        margin-left: 26rem;
-    }
-
-    .p-cards:nth-child(even) {
-        margin-left: 4rem;
-    } */
-
-    /* .p-cards img {
-        margin-left: 1rem;
-    }
-
-    .para p {
-        text-align: end;
-        margin-top: 9px;
-    }*/
 }

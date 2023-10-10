@@ -8,10 +8,12 @@ const tabBtn = document.querySelectorAll(".tab__operation-btn");
 const navMenu = document.querySelector(".menu");
 const tabContainer = document.querySelector(".tab-container");
 const cardContent = document.querySelectorAll(".card__content");
+const progressBar = document.querySelector('#progress-bar')
 // Sections
 const sections = document.querySelectorAll(".section");
 const aboutSec = document.querySelector("#about");
 const home = document.querySelector("#home");
+const main = document.querySelector(".main");
 
 // Responsive Hamburger Menu
 hamburger.addEventListener("click", () => {
@@ -25,6 +27,16 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+// Progress Bar
+window.addEventListener("scroll", () => {
+  let scrollDistance = -main.getBoundingClientRect().top;
+  // console.log(scrollDistance);
+  let progressWidth = (scrollDistance/150)*5;
+  let value = Math.floor(progressWidth)
+  progressBar.style.width = value+'%'
+
+});
 
 // Button to About section
 btnAbout.addEventListener("click", function () {
