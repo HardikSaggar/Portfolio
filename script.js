@@ -8,7 +8,7 @@ const tabBtn = document.querySelectorAll(".tab__operation-btn");
 const navMenu = document.querySelector(".menu");
 const tabContainer = document.querySelector(".tab-container");
 const cardContent = document.querySelectorAll(".card__content");
-const progressBar = document.querySelector('#progress-bar')
+const progressBar = document.querySelector("#progress-bar");
 // Sections
 const sections = document.querySelectorAll(".section");
 const aboutSec = document.querySelector("#about");
@@ -27,16 +27,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
-
-// Progress Bar
-window.addEventListener("scroll", () => {
-  let scrollDistance = -main.getBoundingClientRect().top;
-  // console.log(scrollDistance);
-  let progressWidth = (scrollDistance/150)*5;
-  let value = Math.floor(progressWidth)
-  progressBar.style.width = value+'%'
-
-});
 
 // Button to About section
 btnAbout.addEventListener("click", function () {
@@ -68,14 +58,47 @@ observer.observe(home);
 
 //Tabbed component Project section
 tabContainer.addEventListener("click", function (e) {
+  // e.target.preventDefault();
+
   // Removing active class
-  tabBtn.forEach((b) => b.classList.remove("btn-active"));
   cardContent.forEach((c) => c.classList.remove("card__content--activate"));
+  tabBtn.forEach((b) => b.classList.remove("btn-active"));
   // Activate tab button
   e.target.classList.add("btn-active");
+
   // Activate content
   document
     .querySelector(`.card__content--${e.target.dataset.tab}`)
     .classList.add("card__content--activate");
-  console.log(cardContent);
 });
+
+// Progress Bar
+window.addEventListener("scroll", () => {
+  let scrollDistance = -main.getBoundingClientRect().top;
+  let progressWidth = (scrollDistance / 150) * 5;
+  let value = Math.floor(progressWidth);
+  progressBar.style.width = value + "%";
+});
+
+// Lazy loading images
+const imgTargets = document.querySelectorAll("img[data-src");
+
+const loadingImg = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadingImg, {
+  root: null,
+  threshold: 0,
+  // rootMargin: "200px",
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));

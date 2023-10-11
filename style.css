@@ -16,7 +16,6 @@
 }
 
 body {
-    position: absolute;
     font-family: "Ubuntu", sans-serif;
     background: var(--darkBlue);
     color: white;
@@ -29,7 +28,7 @@ main {
             rgb(0 5 36) 100%);
 }
 
-/* navbar */
+/* navigation bar */
 
 .nav-bar {
     display: flex;
@@ -115,13 +114,13 @@ main {
     width: 100%;
 }
 
-#progress-bar{
+#progress-bar {
     position: absolute;
     top: 100%;
     left: 0;
     height: 8px;
-    background: linear-gradient(to right, var(--anotherBlue),var(--yellow));
-    width: 10%;
+    background: linear-gradient(to right, var(--anotherBlue), var(--yellow));
+    width: 0%;
     z-index: 10;
 }
 
@@ -129,7 +128,7 @@ main {
 .banner {
     display: flex;
     height: 100vh;
-    background: url(/Photos/wp7139290.jpg);
+    background: url(Photos/banner.jpg);
     background-size: cover;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -340,6 +339,10 @@ section h1 {
     opacity: 0.6;
 }
 
+.about-img img{
+    width: 30rem;
+}
+
 .about-img:hover {
     filter: brightness(120%) saturate(100%);
     opacity: 1;
@@ -460,6 +463,7 @@ section h1 {
     color: grey;
     box-shadow: 0 0 100px -23.9px var(--yellow);
     transition: all linear 0.2s;
+    cursor: pointer;
 }
 
 .tab__operation-btn:hover {
@@ -528,6 +532,10 @@ section h1 {
     transition: 0.5s;
 }
 
+.p-cards:hover img{
+    filter: blur(2px);
+}
+
 .p-cards:hover .p-img:before {
     opacity: 1;
 }
@@ -554,7 +562,6 @@ section h1 {
     background-color: transparent;
     border: 0;
     text-shadow: 1px 2px black;
-    /* opacity: 0; */
 }
 
 .info-btn a {
@@ -665,6 +672,11 @@ button {
     color: var(--yellow);
 }
 
+/* Lazy images */
+.lazy-img{
+    filter: blur(10px);
+}
+
 /* MEDIA QUERIES */
 /* Laptops */
 @media screen and (max-width: 900px) {
@@ -682,9 +694,10 @@ button {
 /* Tablets */
 @media screen and (max-width: 780px) {
 
-    /* .p-cards {
-        margin-left: 7rem;
-    } */
+    body{
+        position: absolute;
+    }
+
     .banner {
         height: 125vh;
     }
