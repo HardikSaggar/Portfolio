@@ -164,7 +164,7 @@ main {
 
 .card {
     position: relative;
-    width: 275px;
+    width: 350px;
     padding: 3em;
     color: #fff;
     transform: rotateY(0deg) rotateX(0deg);
@@ -179,7 +179,9 @@ main {
 .card i {
     font-size: 8rem;
     color: var(--navyBlue);
-    margin: 0 0 15px 7px;
+    /* text-align: center; */
+    margin: 0 0 25px 28px;
+    /* margin: 0 0 25px 20px; */
 }
 
 .layers {
@@ -830,8 +832,12 @@ button {
 
     /* Ghost */
 
+    .card{
+        margin-left: -10rem;
+    }
     .card-container i {
-        font-size: 25rem;
+        font-size: 22rem;
+        margin: 0 0 0 4.2rem;
     }
 
     .card:hover {
@@ -839,7 +845,7 @@ button {
     }
 
     .layers {
-        margin-left: -58px;
+        margin-left: -75px;
         width: 185%;
         height: 100%;
     }
