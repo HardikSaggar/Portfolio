@@ -164,30 +164,30 @@ main {
 
 .card {
     position: relative;
-    width: 320px;
+    width: 275px;
     padding: 3em;
     color: #fff;
-    transform: rotateY(30deg) rotateX(15deg);
+    transform: rotateY(0deg) rotateX(0deg);
     transform-style: preserve-3d;
     transition: transform 1s;
 
     &:hover {
-        transform: rotateY(-30deg) rotateX(-15deg);
+        transition: all 0.1s linear;
     }
 }
 
 .card i {
-    font-size: 10rem;
+    font-size: 8rem;
     color: var(--navyBlue);
-    margin: 10px 15px;
+    margin: 0 0 15px 7px;
 }
 
 .layers {
     position: absolute;
     left: 0;
     top: 0;
-    width: 80%;
-    height: 100%;
+    width: 75%;
+    height: 85%;
     transform-style: preserve-3d;
     z-index: -1;
 }
@@ -202,12 +202,6 @@ main {
     background-image: var(--bi);
     transform: translateZ(var(--tz));
     box-shadow: 0 0 0.5em #000d inset;
-
-    @for $i from 0 to 10 {
-        &:nth-child(#{$i + 1}) {
-            --tz: #{$i * -4}px;
-        }
-    }
 
     &:last-child {
         box-shadow: 0 0 0.5em #000d inset, 0 0 5px #000;
@@ -339,7 +333,7 @@ section h1 {
     opacity: 0.6;
 }
 
-.about-img img{
+.about-img img {
     width: 30rem;
 }
 
@@ -532,7 +526,7 @@ section h1 {
     transition: 0.5s;
 }
 
-.p-cards:hover img{
+.p-cards:hover img {
     filter: blur(2px);
 }
 
@@ -673,7 +667,7 @@ button {
 }
 
 /* Lazy images */
-.lazy-img{
+.lazy-img {
     filter: blur(10px);
 }
 
@@ -694,7 +688,7 @@ button {
 /* Tablets */
 @media screen and (max-width: 780px) {
 
-    body{
+    body {
         position: absolute;
     }
 
@@ -837,12 +831,16 @@ button {
     /* Ghost */
 
     .card-container i {
-        font-size: 22rem;
+        font-size: 25rem;
+    }
+
+    .card:hover {
+        transition: all .5s linear;
     }
 
     .layers {
         margin-left: -58px;
-        width: 150%;
+        width: 185%;
         height: 100%;
     }
 

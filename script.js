@@ -5,10 +5,13 @@ const btnAbout = document.querySelector(".btn-1");
 const topBtn = document.querySelector(".top-btn");
 const tabBtn = document.querySelectorAll(".tab__operation-btn");
 
+const ghostContainer = document.querySelector(".card-container");
+const ghost = document.querySelector(".card");
 const navMenu = document.querySelector(".menu");
 const tabContainer = document.querySelector(".tab-container");
 const cardContent = document.querySelectorAll(".card__content");
 const progressBar = document.querySelector("#progress-bar");
+const imgTargets = document.querySelectorAll("img[data-src");
 // Sections
 const sections = document.querySelectorAll(".section");
 const aboutSec = document.querySelector("#about");
@@ -81,7 +84,6 @@ window.addEventListener("scroll", () => {
 });
 
 // Lazy loading images
-const imgTargets = document.querySelectorAll("img[data-src");
 
 const loadingImg = function (entries, observer) {
   const [entry] = entries;
@@ -98,7 +100,27 @@ const loadingImg = function (entries, observer) {
 const imgObserver = new IntersectionObserver(loadingImg, {
   root: null,
   threshold: 0,
-  // rootMargin: "200px",
 });
 
 imgTargets.forEach((img) => imgObserver.observe(img));
+
+// Ghost follow mouse
+const mostX = 10;
+const mostY = 10;
+
+const ghostFollow = function (e) {
+  // ghost.style.transition = "none";
+  let x = e.offsetX;
+  let y = e.offsetY;
+
+  const { width, height } = ghostContainer.getBoundingClientRect();
+  const halfWidth = width / 2;
+  const halfHeight = height / 2;
+
+  const rotationY = ((x - halfWidth) / halfWidth) * mostX;
+  const rotationX = ((y - halfHeight) / halfHeight) * mostY;
+
+  ghost.style.transform = `rotateY(${rotationY}deg) rotateX(${rotationX}deg)`;
+};
+
+ghostContainer.addEventListener("mousemove", ghostFollow);
