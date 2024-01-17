@@ -59,7 +59,7 @@ observer.observe(home);
 
 // Revealing Sections
 
-//Tabbed component Project section
+//Tabbed component Education section
 tabContainer.addEventListener("click", function (e) {
   // e.target.preventDefault();
 
