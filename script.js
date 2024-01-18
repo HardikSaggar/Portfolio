@@ -4,6 +4,7 @@ const hamburger = document.querySelector(".hamburger");
 const btnAbout = document.querySelector(".btn-1");
 const topBtn = document.querySelector(".top-btn");
 const tabBtn = document.querySelectorAll(".tab__operation-btn");
+const slider = document.querySelector(".slider");
 
 const ghostContainer = document.querySelector(".card-container");
 const ghost = document.querySelector(".card");
@@ -17,6 +18,10 @@ const sections = document.querySelectorAll(".section");
 const aboutSec = document.querySelector("#about");
 const home = document.querySelector("#home");
 const main = document.querySelector(".main");
+
+
+
+
 
 // Responsive Hamburger Menu
 hamburger.addEventListener("click", () => {
@@ -124,3 +129,12 @@ const ghostFollow = function (e) {
 };
 
 ghostContainer.addEventListener("mousemove", ghostFollow);
+
+// Project button
+function activate(e) {
+  const items = document.querySelectorAll(".item");
+  e.target.matches(".next") && slider.append(items[0]);
+  e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+}
+
+document.addEventListener("click", activate, false);
