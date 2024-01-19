@@ -507,11 +507,12 @@ section h1 {
 .e-info h2 {
     font-size: 3em;
     color: var(--anotherBlue);
-    margin: 0 0 .5em 0;
+    margin: 0 0 .4em 0;
 }
 
 .e-info p {
-    margin-bottom: 2.5em;
+    font-size: 1.1rem;
+    margin-bottom: 1em;
     color: #474747;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -553,18 +554,15 @@ section h1 {
 }
 
 figure.snip1208 {
-    font-family: 'Raleway', Arial, sans-serif;
-    color: #fff;
-    /* color: var(--yellow); */
+    font-family: "Cabin", sans-serif;
+    color: #2d2d2d;
     position: relative;
     overflow: hidden;
     margin: 10px;
     min-width: 220px;
     max-width: 310px;
     width: 100%;
-    /* background-color: #ffffff; */
     background-color: var(--yellow);
-    color: #000000;
     text-align: left;
     font-size: 16px;
 }
@@ -786,7 +784,7 @@ figure.snip1208.hover button {
     }
 
     .e-info h2 {
-        font-size: 3.5em;
+        font-size: 3.0em;
         margin: 0;
     }
 
@@ -892,7 +890,6 @@ figure.snip1208.hover button {
 
     figure.snip1208 p {
         font-size: 1.4em;
-        color: #000;
     }
 
     figure.snip1208 button {
